@@ -1,5 +1,6 @@
 {
-  "name": "react-app-scull",
+  "name": "solarcook",
+  "homepage": "http://the-prince-237.github.io/solarcook",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
