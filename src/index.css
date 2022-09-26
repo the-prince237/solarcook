@@ -1,14 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-
-:root {
+:root{
+  --main-color: #319846;
+  --shadow-small: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px 2px 5px rgba(0, 0, 0, 0.2),  2px -2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.2);
   --font-family: 'Manrope', sans-serif;
+  --secondary-family: manjari;
 
-  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
-  
   --color-bg: #040C18;
   --color-footer : #031B34;
   --color-blog: #042c54;
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
+
+  --gradient-logo: linear-gradient(160deg, rgb(0, 0, 0), rgb(8, 41, 208), skyblue);
+  --gradient-text: linear-gradient(89.97deg, rgb(3, 18, 64), gray);
+  --gradient-text-white: linear-gradient(89.97deg, silver, white);
+  --gradient-bar: linear-gradient(103.22deg, rgb(0, 0, 0), rgb(6, 28, 95) -13.86%, rgb(105, 147, 226) 99.55%); 
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #3198468c; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 5px;
 }

@@ -1,18 +1,48 @@
 *{
+  background-repeat: no-repeat;
+  font-size: 95%;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  transition: 300ms;
 }
 
 body{
-  background: var(--color-bg);
   font-family: var(--font-family);
 }
 
-a{
+.App{
+  width: 100%;
+}
+
+input{
+  border: none;
+  padding: 0 15px;
+}
+
+input:focus{
+  outline: none;
+  border: none;
+}
+
+button{
+  border: none;
+  background-color: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a, Link{
   color: unset;
   text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul, li{
+  list-style-type: none;
 }
 
 .gradient__bg{
@@ -32,6 +62,23 @@ a{
   background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
 
+.button{
+  border: solid 1px;
+  background: none;
+  padding: 5px;
+  border-radius: 50px;
+  height: 25px;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.button:hover{
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.524);
+}
+
 /*002853
 040c18
 
@@ -45,12 +92,31 @@ y25*/
   -webkit-text-fill-color: transparent;
 }
 
+.gradient__logo{
+  background: var(--gradient-logo);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient__text-white{
+  background: var(--gradient-text-white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .section__padding{
   padding: 4rem 6rem;
 }
 
 .section__margin{
   margin: 4rem 6rem;
+}
+
+.paragraph{
+  color: var(--color-text);
+  margin: 25px 0;
 }
 
 .scale-up-center {
