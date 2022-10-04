@@ -2,20 +2,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProductsListWrapper = styled.div`
- display: flex;
- flex-direction: column;
- align-items: center;
- & .chevron{
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: ${({isOpened}) => isOpened ? "rotate(180deg)" : "rotate(0deg)"}
- }
- & .list-wrapper{
-  transform: ${({isOpened}) => isOpened ? "scaley(1)" : "scaley(0)"};
-  max-height: ${({isOpened}) => !isOpened && "0"};
- }
+  & .chevron{
+   font-size: 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: ${({isOpened}) => isOpened ? "rotate(180deg)" : "rotate(0deg)"}
+  }
+  & .list-wrapper{
+    transform: ${({isOpened}) => isOpened ? "scaley(1)" : "scaley(0)"};
+    max-height: ${({isOpened}) => !isOpened && "0"};
+  }
 `
 
 export const ListTitle = styled.div`
@@ -40,7 +37,7 @@ export const ListWrapper = styled.div`
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-evenly;
-  ${({isOpened}) => !isOpened & "max-height: 0"}
+  ${({isOpened}) => !isOpened & "max-height: 0"};
 `
 
 export const ProductPrevWrapper = styled.div`

@@ -3,12 +3,12 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { BiCart } from 'react-icons/bi'
 import { CartContext } from '../../../../utils/context'
 
-import  { ProductPrevWrapper, SupInfos, ProductImage, ProductInfos, Note, Bar, Command, CommandButton, ProductPrice, SubInfos, ProductLink, ProductName, ProductCategory,CartButton } from '../../style'
+import  { ProductPrevWrapper, SupInfos, ProductImage, ProductInfos, Note, Bar, Command, ProductPrice, SubInfos, ProductLink, ProductName, ProductCategory,CartButton } from '../../style'
 
 const ProductPrev = ({ product }) => {
 
   const { addToCart } = useContext(CartContext);
-  const { name, image, note, category, price, id } = product
+  const { name, image, note, category, price, id } = product;
 
   const noteArray = [];
 
@@ -31,7 +31,7 @@ const ProductPrev = ({ product }) => {
           </Note>
           <Bar />
           <Command>
-            <CommandButton className='button' to={`/checkout?toCheckout=product&productId=${product.id}`}>Commander</CommandButton>
+            {/* <CommandButton className='button' to={`/checkout?toCheckout=product&productId=${id}`}>Commander</CommandButton> */}
             <ProductPrice>{price} {process.env.CURRENCY || "Fcfa"}</ProductPrice>
           </Command>
         </ProductInfos>

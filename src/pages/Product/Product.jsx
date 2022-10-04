@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { products } from '../../data/products';
+import { useParams } from 'react-router-dom'
+import products from '../../data/products';
 
 import { AiOutlineStock, AiFillTag, AiFillShop } from 'react-icons/ai'
 
@@ -15,14 +15,8 @@ const Product = () => {
 
   const { productId } = useParams();
 
-  var product = {};
-
-  products.map((prod) => {
-    if(parseInt(prod.id) === parseInt(productId)) {
-      product = prod;
-    }
-    return 0;
-  })
+  var product = products.filter((prod) => prod.id === parseInt(productId))[0];
+  console.log({product})
 
   const {id, name, category, note, image, price} = product;
 
@@ -56,7 +50,7 @@ const Product = () => {
               </div>
               <div className='product__shop-options'>
                 <button onClick={() => addToCart(product)} className=''>Ajouter à la carte</button>
-                <Link to="checkout" className=''>Commander</Link>    
+                {/* <Link to={`/checkout?toCheckout=product&productId=${id}`} className=''>Commander</Link>     */}
               </div>
             </div>
           </ContentFooter>

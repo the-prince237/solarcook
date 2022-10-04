@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakPoints from "../../utils/style/breakPoints";
 
 export const HeroWrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -8,9 +9,15 @@ export const HeroWrapper = styled.div`
   & >.image {
     & > img{
       width: 250px;
+      @media ${breakPoints.lg}{
+        width: 200px;
+      }
+      @media screen and (max-width: 850px){
+        display: none;
+      }
     }
   }
-  & p {
-    font-size: 24px;
+  & .paragraph {
+    font-weight: normal;
   }
 `

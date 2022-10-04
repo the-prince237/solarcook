@@ -10,7 +10,7 @@ const ProductsList = ({ withFilter, listLenght, listTitle }) => {
   const [listIsOpened, setListIsOpened] = useState(true);
 
   return (
-    <ProductsListWrapper isOpened={listIsOpened} className='section__margin'>
+    <ProductsListWrapper rowFlexed={withFilter} isOpened={listIsOpened} className='section__margin'>
       {withFilter &&
         <ListFilter />
       }

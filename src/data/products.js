@@ -1,4 +1,4 @@
-export const products = [
+const products = [
   {
     id: 0,
     name: "Headphones",
@@ -261,3 +261,14 @@ export const products = [
     note: 4,
   },
 ]
+
+products.map((product, index) => {
+  let el = index%8;
+  product.category= `${el+1}`;
+  product.subCategory = `${el+1}`;
+  product.childCategory = `${el+1}`;
+
+  return product
+})
+
+export default products;

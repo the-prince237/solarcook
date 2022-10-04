@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import colors from './colors'
 import styled, { keyframes } from 'styled-components'
+import breakPoints from './breakPoints'
 
 const rotate = keyframes`
   from {
@@ -37,14 +38,23 @@ export const StyledLink = styled(Link)`
 
 export const Title1 = styled.h1`
   font-size: 48px;
+  @media ${breakPoints.xl}{
+    font-size: 36px;
+  }
 `
 
 export const Title2 = styled.h1`
   font-size: 36px;
+  @media ${breakPoints.xl}{
+    font-size: 24px;
+  }
 `
 
 export const Title3 = styled.h1`
   font-size: 24px;
+  @media ${breakPoints.xl}{
+    font-size: 18px;
+  }
 `
 
 export const Title4 = styled.h1`

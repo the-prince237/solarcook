@@ -36,7 +36,7 @@ const Cart = () => {
         <div>
           <div>{cart.netTotal}</div><p>{cart.total}</p>
         </div>
-        <Link to={`/checkout?cart=${true}`}>
+        <Link to={`/checkout?toCheckout=cart`}>
           Commander
         </Link>
         <div onClick={resetCart}>Reset</div>

@@ -7,6 +7,7 @@ export const ProductWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 export const ProductFullImage = styled.img`
